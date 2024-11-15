@@ -1,0 +1,28 @@
+pipeline{
+    
+    agent any
+    
+    stages{
+        stage("scm"){
+            steps{
+                echo "hi i am scm"
+                git 'https://github.com/priyam930/jenkinsweb.git'
+            }
+        }
+        stage("build"){
+            steps{
+                echo "hi i am build"
+            }
+        }
+        stage("test"){
+            steps{
+                echo "hi i am test"
+            }
+        }
+        stage("deploy"){
+            steps{
+                echo "hi i am deploy"
+            }
+        }
+    }
+}
