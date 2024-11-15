@@ -6,7 +6,7 @@ pipeline{
         stage("scm"){
             steps{
                 echo "hi i am scm"
-                git 'https://github.com/priyam930/jenkinsweb.git'
+                sh "date"
             }
         }
         stage("build"){
@@ -20,7 +20,7 @@ pipeline{
             }
         }
         stage("deploy"){
-            steps{
+            step{
                 echo "hi i am deploy"
             }
         }
